@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from your Git repository
-                git 'https://your.git.repo/url.git'
+                git 'https://github.com/MysticDarknes/jenkins.git'
             }
         }
 
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Copy the HTML file to the desired location on your local machine
-                sh 'cp index.html /path/to/your/local/webserver/root/directory'
+                sh 'cp index.html /var/www/html/'
             }
         }
     }
