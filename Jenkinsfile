@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Copy the HTML file to the desired location on your local machine
                 echo 'build and deploy steps go here'
-                sh 'cp index.html /var/www/html'  // Adjust the path accordingly
+                //sh 'cp index.html /var/www/html'  // Adjust the path accordingly
             }
         }
     }
