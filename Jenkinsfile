@@ -9,16 +9,10 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                // You can add build steps here if needed
-            }
-        }
-
         stage('Deploy') {
             steps {
                 // Copy the HTML file to the desired location on your local machine
-                sh 'cp index.html /var/www/html/'
+                sh 'cp index.html /var/www/html'  // Adjust the path accordingly
             }
         }
     }
