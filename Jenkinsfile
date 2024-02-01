@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Build and Deploy') {
             steps {
-                // Copy the HTML file to the desired location on your local machine
-                echo 'build and deploy steps go here'
-                //sh 'cp index.html /var/www/html'  // Adjust the path accordingly
+                // Your build and deploy steps here
+                echo 'Build and deploy steps go here'
+                sh "cp -r index.html /tmp/"
             }
         }
     }
