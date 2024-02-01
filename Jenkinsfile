@@ -4,8 +4,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the code from your Git repository
-                git branch: 'main', url: 'https://github.com/MysticDarknes/jenkins.git'
+                script {
+                    // Clean workspace before checkout
+                    deleteDir()
+
+                    // Clone the repository and specify the branch
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/akhilaps58/autorepo.git']]])
+                }
             }
         }
 
