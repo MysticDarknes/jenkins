@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from your Git repository
-                git 'https://github.com/MysticDarknes/jenkins.git'
+                git branch: 'your-branch-name', url: 'https://github.com/MysticDarknes/jenkins.git'
             }
         }
 
