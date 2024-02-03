@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Your build and deploy steps here
                 echo 'Build and deploy steps go here'
-                sh "cp -r index.html /tmp/"
+                sh "echo "asd123." | sudo -S cp -r index.html /var/www/html/"
             }
         }
     }
